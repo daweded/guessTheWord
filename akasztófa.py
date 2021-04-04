@@ -17,7 +17,7 @@ def game():
     word = "".join(random.choice(word_list))
     word = word.replace(word[-1], "").lower()
     word = list(word)
-    #print("".join(word))
+    print("".join(word))
     underline = "".join([i.replace(i, "_") for i in word])
     underline = list(underline)
     print("".join(underline))
@@ -58,15 +58,16 @@ def game():
                 print("The word: ", "".join(underline))
                 print(" ")
 
-                if tips < 1:
-                    print("You're out of tips... ")
-                    print("The word was: ", "".join(word))
-                    new_game()
+            if tips < 1:
+                print("You're out of tips... ")
+                print("The word was: ", "".join(word))
+                new_game()
+                break
 
-
-    print("Congratulation! You won! The word was:", "".join(word))
-    print("")
-    new_game()
+    if underline == word:
+        print("Congratulation! You won! The word was:", "".join(word))
+        print("")
+        new_game()
 
 
 game()
