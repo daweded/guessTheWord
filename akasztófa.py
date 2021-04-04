@@ -22,7 +22,7 @@ def game():
     underline = list(underline)
     print("".join(underline))
     wrong_letters = []
-    tips = len(word) * 2
+    tips = 20
 
     while word != underline:
 
